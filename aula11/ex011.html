@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex009 em site</title>
+</head>
+<body>
+    <h1>IDENTIFICADOR DE NACIONALIDADE</h1>
+    Diga em que país você nasceu: <input type="text" name="país" id="país">
+    <input type="button" value="Verificar" onclick="checar()">
+    <div id = "res">
+        <p>Aguardando resposta...</p>
+    </div>
+    <script>
+        function checar() {
+
+            var res = window.document.getElementById('res')
+            var rpais = vpais.value 
+            
+            res.innerHTML = `<p>Seu país de origem é ${rpais}</p>`
+            
+            if (rpais == 'Brasil') {
+                res.innerHTML += `<p>Você é <strong>BRASILEIRO</strong></p>`
+             
+            } else {
+                res.innerHTML += `<p>Você é ESTRANGEIRO<p>`
+            }
+        }
+
+    </script>    
+</body>
+</html>

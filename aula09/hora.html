@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    function mostrarHora() {
+        // Cria um novo objeto Date
+        var agora = new Date();
+      
+        // Obtém os valores de hora, minuto e segundo do objeto Date
+        var hora = agora.getHours();
+        var minuto = agora.getMinutes();
+        var segundo = agora.getSeconds();
+      
+        // Adiciona um zero à frente dos valores de hora, minuto e segundo se forem menores que 10
+        if (hora < 10) {
+          hora = "0" + hora;
+        }
+        if (minuto < 10) {
+          minuto = "0" + minuto;
+        }
+        if (segundo < 10) {
+          segundo = "0" + segundo;
+        }
+      
+        // Exibe a hora no elemento HTML com id "relogio"
+        document.getElementById("relogio").innerHTML = hora + ":" + minuto + ":" + segundo;
+      }
+      
+      // Chama a função a cada 1000 milissegundos (1 segundo)
+      setInterval(mostrarHora, 1000);
+</body>
+</html>
